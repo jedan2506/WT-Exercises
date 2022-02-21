@@ -1,0 +1,119 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Log In</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<nav>
+		<img src="download.png" class="image1">
+		<input type="checkbox" id="checkv">
+		<label for="checkv" class="checkbtn"><i class="fa fa-bars"></i></label>
+
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="log.html">Log In</a></li>
+			<li><a href="hospital.html">Conferences</a></li>
+			<li><a href="content.html">Frames</a></li>
+			<li><a href="contact us.html">Contact Us</a></li>
+		</ul>
+	</nav>
+		
+
+		<div class="body1">
+<br>
+	<div class="login">
+		<h1>Log In</h1><br>
+		<form method="POST" action="index.html" onsubmit="return validate()">
+			<input type="username" name="username" id="username"placeholder="Please Enter your Username" style="width: 200px; text-align: center;"><br><br>
+			<input type="password" name="password" id="password" placeholder="Please Enter your Password" style="width: 200px; text-align: center;"><br>
+			<br><p><input type="checkbox" name="check" id="check" style="text-align: center;">Agree to the Terms and Conditions</p><br>
+			<input type =  "submit" id = "btn" value = "Login"/> 
+			<br><br><hr><br>
+			<p><b>OR</b></p><br>
+			<a href="signup.html"><button type="button" name="sign" class="but">Sign Up</button></a><br><br>
+			<p style="font-size: 12px; text-align: center;">Do you want to Sign Up using Gmail? <a href="https://accounts.google.com/signin/v2/identifier?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%2F&ec=GAlAwAE&flowName=GlifWebSignIn&flowEntry=AddSession">Sign Up</a></p>
+		</form>
+	</div>
+	<input type="text" id="la" value="1" style="visibility: hidden;">
+	<input type="text" id="laa" value="1" style="visibility: hidden;">
+	<div class="footer">
+			<div class="social">
+				<a href="#" class="fa fa-facebook-f"></a>
+				<a href="#" class="fa fa-twitter"></a>
+				<a href="#" class="fa fa-instagram"></a>
+				<a href="#" class="fa fa-snapchat"></a>
+			</div>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="hospital.html">Conferences</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="contact us.html">Contact Us</a></li>
+				</ul>
+
+			<p class="christ">Christ University</p>
+		</div>
+</div>
+
+
+<script type="text/JavaScript">
+    function validate()
+    {
+        var user=document.getElementById('username').value;
+        var pass=document.getElementById('password').value;
+        var l=document.getElementById('la').value;
+        var l1=document.getElementById('laa').value;
+        var check=document.getElementById('check');
+
+        const access=
+        {
+        	username: "admin",
+        	password: "admin"
+        };
+        if(l<=3)
+        {
+        if((user=="")||(user==null))
+        {
+            var nuser=prompt("Sorry Please Enter a Username!! Please Enter an Username");
+            document.getElementById('username').value=nuser;
+            return false;
+        }
+        else if((pass=="")||(pass==null))
+        {
+            alert("Sorry Please Enter a Password");
+            return false;
+        }
+        else if(check.checked==false)
+        {
+        	alert("Please Click on Agree on Terms and Conditions");
+        	return false;
+        }
+        else
+        {
+        	if((user==access.username)&&(pass==access.password))
+        	{
+        		alert("Successfully Logged In");
+        		return true;
+        	}
+        	else
+        	{
+        		alert("Invalid Password or Username "+l);
+        		l++;
+        		document.getElementById('la').value=l;
+        		return false
+        	}
+        }
+    }
+    else
+    {
+    	alert("You Have entered the Wrong Password or Username Thrice");
+    	return false;
+    }
+    }
+    </script>
+
+</body>
+</html>

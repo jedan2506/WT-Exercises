@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Image Mapping</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<nav>
+		<img src="imsgr.png" class="image1">
+		<input type="checkbox" id="checkv">
+		<label for="checkv" class="checkbtn"><i class="fa fa-bars"></i></label>
+
+		<label class="logo">Euphoria</label>
+		<ul>
+			<li><a href="frontpage.html">Home</a></li>
+			<li><a href="log.html">Log In</a></li>
+			<li><a href="content.html">Frames</a></li>
+			<li><a href="index.html">Image Mapping</a></li>
+		</ul>
+	</nav>
+
+	<div class="imagemap">
+		<h1 class="til">Image Mapping with Clickable Region</h1><br><br>
+		<img src="dis.png" usemap="#disab" height="330px" width="330px">
+		<map name="disab">
+			<area shape="rect" coords="2,0,164,154" href="https://www.quora.com/What-are-the-problems-faced-by-disabled-persons">
+			<area shape="rect" coords="164,5,323,153" href="https://wecapable.com/problems-faced-by-blind-people/#:~:text=Navigating%20Around%20Places,of%20everything%20in%20the%20house.">
+			<area shape="rect" coords="2,169,164,317" href="https://en.wikipedia.org/wiki/Muteness#:~:text=Mutism%20may%20be%20due%20to,a%20severe%20form%20of%20dysarthria.">
+			<area shape="rect" coords="166,164,325,321" href="https://en.wikipedia.org/wiki/Disability">
+		</map><br><br>
+
+		<p>Please Click on the Separate Images to See in Detail about them</p>
+	</div>
+
+	<div class="footer" style="height: 90px; position: fixed; color: whitesmoke;">
+		<h1 class="head"><b>Contact Us<b></b>
+		<p class="para">+91 9765432120</p>
+		<p class="para">+91 8745698523</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css">
+</head>
+
+<body>
+	<nav>
+		<img src="download.png" class="image1">
+		<input type="checkbox" id="checkv">
+		<label for="checkv" class="checkbtn"><i class="fa fa-bars"></i></label>
+
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="log.html">Log In</a></li>
+			<li><a href="hospital.html">Conferences</a></li>
+			<li><a href="content.html">Frames</a></li>
+			<li><a href="contact us.html">Contact Us</a></li>
+		</ul>
+	</nav>
+		
+
+	<div class="body1">
+		<br>
+		<div class="signup">
+			<h1 style="text-align:center;">Sign Up</h1><br>
+			<form>
+				Enter your Name:: <input type="name" name="first" id="first" placeholder="First Name" onblur="validate1()"><label>  </label><input type="name" name="middle" placeholder="Middle Name"><label>  </label><input type="name" name="last" id="last" placeholder="Last Name" onblur="return validate2()"><br><br>
+				Enter your DOB:: <input type="date" name="dob"><br><br>
+				Select your Gender:: <input type="radio" name="gender" id="gender" value="Male"><label>Male </label>
+				<input type="radio" name="gender" value="Female" id="gender"><label>Female </label>
+				<input type="radio" name="gender" value="Others" id="gender"><label>Others</label><br><br>
+				Enter the Username:: <input type="username" name="username" id="username" style="width: 200px; text-align: center;"><br><br>
+				Enter the Password:: <input type="password" name="password" id="password" style="width: 200px; text-align: center;"><br><br>
+				Enter the Confirm Password:: <input type="password" name="cpassword" id="cpassword" style="width: 200px; text-align: center;"><br><br>
+				<p><input type="checkbox" name="check" style="text-align: center;">Agree to the Terms and Conditions</p><br>
+				<div style="text-align:center;"><button type="button" name="submit" class="but" onclick="return validate()">SUBMIT</button></div>
+				<br><br><hr><br>
+				<p style="text-align:center;"><b>OR</b></p><br>
+				<div style="text-align:center;"><a href="index.html"><button type="button" name="submit" class="log">Log In</button></a></div><br>
+				<p style="font-size: 12px; text-align: center;">Do you want to Sign Up using Gmail? <a href="https://accounts.google.com/signin/v2/identifier?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%2F&ec=GAlAwAE&flowName=GlifWebSignIn&flowEntry=AddSession">Sign Up</a></p>	
+			</form>
+		</div>
+		<div class="footer">
+			<div class="social">
+				<a href="#" class="fa fa-facebook-f"></a>
+				<a href="#" class="fa fa-twitter"></a>
+				<a href="#" class="fa fa-instagram"></a>
+				<a href="#" class="fa fa-snapchat"></a>
+			</div>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="hospital.html">Conferences</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="contact us.html">Contact Us</a></li>
+				</ul>
+
+			<p class="christ">Christ University</p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function validate()
+		{
+			var user=document.getElementById("username").value;
+			var pass=document.getElementById("password").value;
+			var cpass=document.getElementById("cpassword").value;
+			var ele = document.getElementsByName("gender");
+			let i1=0;
+              
+            for(i = 0; i < ele.length; i++) 
+            {
+                if(ele[i].checked)
+                {
+                	i1=1;
+                	alert(ele[i].value);
+                }
+            }
+
+            if(i1==0)
+            	alert("nikal bsdk! nahi jaroorat teri iss duniya mein");
+
+			if(pass!=cpass)
+			{
+				alert("The Entered Confirmed Paaword does not Match with the Entered Password");
+				return false;
+			}
+		}
+
+		function validate1()
+		{
+			var n1=document.getElementById("first").value;
+			if((n1=="")||(n1==null))
+			{
+				alert("First Name cannot be Empty");
+				focus();
+			}
+		}
+
+		function validate2()
+		{
+			var n2=document.getElementById("last").value;
+			if((n2=="")||(n2==null)) 
+			{
+				alert("Last Name cannot be Empty");
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>
