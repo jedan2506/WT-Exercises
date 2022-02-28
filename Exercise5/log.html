@@ -70,18 +70,9 @@
 	<div class="login">
 		<h1>Log In</h1><br>
 		<form method="POST" onsubmit="return validate()" action="login.php">
-			<?php if(isset($_SESSION["error"])) { ?>
-				<p style="color: red;"><?= $_SESSION["error"]; ?></p>;
-			<?php unset($_SESSION["error"]); } ?>
 			<input type="username" name="username" id="username"placeholder="Please Enter your Username" style="width: 200px; text-align: center;"><br><br>
 			<input type="password" name="password" id="password" placeholder="Please Enter your Password" style="width: 200px; text-align: center;"><br>
-			<br><p><input type="checkbox" name="check" id="check" style="text-align: center;">Agree to the Terms and Conditions</p><br>
-				<?php
-					if($_SESSION["login_attempts"]>2)
-					{
-						$_SESSION["locked"]=time();
-					}
-				?>
+			<br><p><input type="checkbox" name="check" id="check" style="text-align: center;">Agree to the Terms and Conditions</p><br>				
 			<input type =  "submit" id = "btn" value = "Login"> 
 			<br><br><hr><br>
 			<p><b>OR</b></p><br>

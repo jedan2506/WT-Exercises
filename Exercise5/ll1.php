@@ -1,33 +1,16 @@
-<?php
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>New Page</title>
+</head>
+<body>
+	<?php
+		session_start();
+		echo $_SESSION['username'];
+	?>
 
-    session_start();
-    
-    if($_SERVER["REQUEST_METHOD"]=="POST")
-    {
-	include('connect.php');
-		$uname=$_POST['username'];
-		$passw=$_POST['password'];
-		$sql="select * from users where username= '$uname'AND password='$passw'";
-
-		$result = mysqli_query($con, $sql);  
-		if(mysqli_num_rows($result)>0)
-		{
-			$row=mysqli_fetch_object($result);
-
-			if(password_verify($passw,$row->password))
-			{
-
-			}
-			else
-			{
-				$_SERVER["error"]="Password does not match";
-			}
-		} 
-    }
-    else
-    {
-    	$_SERVER["error"]="Username does not found";
-    }
-?>
-
-
+</body>
+</html>
