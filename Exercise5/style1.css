@@ -1,0 +1,123 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+body
+{
+	background-color: whitesmoke;
+	position: relative;
+}
+
+.center
+{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+nav ul li a
+{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: black;
+	font-size: 18px;
+	border-radius: 80px;
+
+}
+
+a:hover, a.active
+{
+	transition: 0.5;
+	background-color: lightblue;
+	border-radius: 220px;
+	padding: 6px;
+}
+
+nav ul li
+{
+	display: inline-block;
+	line-height: 80px;
+	margin: 0px 8px;
+}
+
+nav ul
+{
+	float: right;
+	margin-right: 30px;
+}
+
+nav
+{
+	width: 100%;
+	height: 90px;
+	background-color: ghostwhite;
+}
+
+.image
+{
+	width: 120px;
+	height: 60px;
+	padding-top: 20px;
+}
+
+tr, th
+{
+	border: 2px solid black;
+	font-weight: bold;
+	width: 22%;
+}
+
+td
+{
+	border: 1px solid black;
+	padding: 20px;
+}
+
+table
+{
+	border: 2px solid black;
+	float: center;
+	text-align: center;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 22%;
+}
+
+div
+{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+form
+{
+	box-shadow:  0 15px 30px 0 rgba(0,0,0,0.11),
+	0 5px 15px 0 rgba(0,0,0,0.08);
+	text-align: center;
+	border: 2px solid black;
+	width: 22%;
+	margin-right: auto;
+	margin-left:  auto;
+	display: block;
+	transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
+	border-radius: 0.5rem;
+}
+
+form:hover
+{
+	
+}
+
+.mapping
+{
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	text-align: center;
+}
